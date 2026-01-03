@@ -203,7 +203,7 @@
 
     <header>
         <div class="logo-wrapper">
-            <img src="logo.png" alt="Arai" class="main-logo" onerror="this.src='https://i.ibb.co/Xz9kH0h/image.png'">
+            <img src="logo.jpeg" alt="Arai" class="main-logo" onerror="this.src='https://i.ibb.co/Xz9kH0h/image.png'">
             <div class="premium-badge">Expert</div>
         </div>
         <h1>ARAI CONSULTING</h1>
