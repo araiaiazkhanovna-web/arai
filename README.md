@@ -1,0 +1,258 @@
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arai Consulting | Сіздің Қаржылай-экспертіңіз</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #E2B04E;
+            --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728);
+            --bg-dark: #050505;
+            --card-glass: rgba(255, 255, 255, 0.05);
+            --border-glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Артқы фондағы декоративті шеңберлер */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(226, 176, 78, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(226, 176, 78, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        header {
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        /* Жаңа стильді логотип */
+        .logo-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .main-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            padding: 5px;
+            background: var(--bg-dark);
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(226, 176, 78, 0.2);
+        }
+
+        .premium-badge {
+            position: absolute;
+            bottom: 0; right: 0;
+            background: var(--gold-gradient);
+            color: black;
+            font-size: 10px;
+            font-weight: 900;
+            padding: 5px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .expert-title {
+            font-size: 1rem;
+            color: #ccc;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .expert-highlight {
+            color: var(--gold);
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 20px 50px;
+        }
+
+        /* Прайс-карточкалардың жаңа дизайны */
+        .price-list {
+            display: grid;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .price-item {
+            background: var(--card-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .price-item:hover {
+            transform: translateY(-5px);
+            background: rgba(226, 176, 78, 0.1);
+            border-color: var(--gold);
+        }
+
+        .item-label {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .item-label i {
+            width: 40px;
+            height: 40px;
+            background: rgba(226, 176, 78, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .item-name {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #efefef;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        /* Байланыс батырмалары */
+        .actions {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 20px;
+            border-radius: 18px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: 0.3s;
+        }
+
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-insta {
+            background: var(--gold-gradient);
+            color: #000;
+            box-shadow: 0 10px 20px rgba(226, 176, 78, 0.2);
+        }
+
+        .btn:hover { transform: scale(1.02); }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #444;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <header>
+        <div class="logo-wrapper">
+            <img src="logo.png" alt="Arai" class="main-logo" onerror="this.src='https://i.ibb.co/Xz9kH0h/image.png'">
+            <div class="premium-badge">Expert</div>
+        </div>
+        <h1>ARAI CONSULTING</h1>
+        <p class="expert-title">Мен аресттерді шешемін</p>
+        <span class="expert-highlight">Сіздің Қаржылай-экспертіңіз</span>
+    </header>
+
+    <div class="container">
+        <div class="price-list">
+            <div class="price-item">
+                <div class="item-label"><i class="fas fa-file-contract"></i><span class="item-name">Нотариалный арест</span></div>
+                <div class="item-price">5 000 ₸</div>
+            </div>
+            <div class="price-item">
+                <div class="item-label"><i class="fas fa-gavel"></i><span class="item-name">Соттық жұмыстар</span></div>
+                <div class="item-price">15 000 ₸</div>
+            </div>
+            <div class="price-item">
+                <div class="item-label"><i class="fas fa-landmark"></i><span class="item-name">Банкроттық бойынша</span></div>
+                <div class="item-price">20 000 ₸+</div>
+            </div>
+            <div class="price-item">
+                <div class="item-label"><i class="fas fa-bolt"></i><span class="item-name">Графиктер (ускоренный)</span></div>
+                <div class="item-price">10 000 ₸+</div>
+            </div>
+            <div class="price-item">
+                <div class="item-label"><i class="fas fa-fingerprint"></i><span class="item-name">Егов услугалары</span></div>
+                <div class="item-price">1 000 ₸+</div>
+            </div>
+            <div class="price-item">
+                <div class="item-label"><i class="fas fa-shield-halved"></i><span class="item-name">Страховка қайтарту</span></div>
+                <div class="item-price">10%</div>
+            </div>
+            <div class="price-item">
+                <div class="item-label"><i class="fas fa-star"></i><span class="item-name">Рейтинг қызметі</span></div>
+                <div class="item-price">20 000 ₸</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="https://wa.me/77716574345" class="btn btn-wa">
+                <i class="fab fa-whatsapp"></i> WhatsApp-қа жазу
+            </a>
+            <a href="https://www.instagram.com/arai_aueskhanovna" target="_blank" class="btn btn-insta">
+                <i class="fab fa-instagram"></i> Instagram парақша
+            </a>
+        </div>
+
+        <footer>&copy; 2026 ARAI CONSULTING. All rights reserved.</footer>
+    </div>
+</body>
+</html>
